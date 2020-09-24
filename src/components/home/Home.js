@@ -13,7 +13,7 @@ const Home = () => {
         />
         <div className="home__row">
           <Product
-            id="123"
+            id="12321341"
             title="The lean startup: How Constant Innovation Creates Radically Successful Businesses Paperback"
             price={29.99}
             rating={4}
@@ -22,7 +22,7 @@ const Home = () => {
           <Product
             id="89893333"
             title="Fitbit Charge 4 With Built-in GPS"
-            price={80.5}
+            price={80.55}
             rating={4}
             imgSrc="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg"
           />
@@ -31,21 +31,21 @@ const Home = () => {
           <Product
             id="67893426"
             title="Apple iPhone 11 Pro Max (64GB) - Midnight Green"
-            price={1200}
+            price={1200.99}
             rating={5}
             imgSrc="https://m.media-amazon.com/images/I/61ers6OzvUL._AC_UY218_.jpg"
           />
           <Product
             id="73282018"
             title="Amazon Echo (3rd Gen) – Improved sound, powered by Dolby (Black)"
-            price={49.99}
+            price={89.99}
             rating={4}
             imgSrc="https://m.media-amazon.com/images/I/7128HRanJgL._AC_UY218_.jpg"
           />
           <Product
             id="23281018"
             title="New Apple iPad Pro (12.9-inch, Wi-Fi, 128GB) - Silver (4th Generation)"
-            price={850}
+            price={850.99}
             rating={5}
             imgSrc="https://images-na.ssl-images-amazon.com/images/I/816ctt5WV5L._AC_SX385_.jpg"
           />
@@ -54,7 +54,7 @@ const Home = () => {
           <Product
             id="32949249"
             title="Samsung S19F350HNW 18.5-inch AH IPS LED Monitor (Black) (Not A TV)"
-            price={250}
+            price={250.69}
             rating={4}
             imgSrc="https://m.media-amazon.com/images/I/81JNAFOB3lL._AC_UY218_.jpg"
           />

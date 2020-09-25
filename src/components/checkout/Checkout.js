@@ -18,7 +18,8 @@ const Checkout = () => {
           <h2 className="checkout__title">Your shopping Basket</h2>
           {basket.map((item) => (
             <CheckoutProduct
-              key={item.id}
+              key={item.id + Math.random()}
+              id={item.id}
               imgSrc={item.imgSrc}
               title={item.title}
               price={item.price}

@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom';
 import { useStateValue } from '../../store/StateProvider';
 
 const Header = () => {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket }] = useStateValue();
+
   return (
     <div className="header">
       <Link to="/">
@@ -42,7 +43,7 @@ const Header = () => {
           <div className="header__option-basket">
             <ShoppingBasketIcon />
             <span className="header__option-two header__basketCount">
-              {basket.length}
+              {basket?.length}
             </span>
           </div>
         </Link>

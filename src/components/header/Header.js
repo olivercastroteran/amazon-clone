@@ -31,9 +31,11 @@ const Header = () => {
       </div>
 
       <div className="header__nav">
-        <Link to="/login">
+        <Link to={!user ? '/login' : '/'}>
           <div onClick={handleAuthentication} className="header__option">
-            <span className="header__option-one">Hello {user?.email}</span>
+            <span className="header__option-one">
+              Hello {user ? user.email : 'Guest'}
+            </span>
             <span className="header__option-two">
               {user ? 'Sign Out' : 'Sign In'}
             </span>

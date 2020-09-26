@@ -6,7 +6,7 @@ const Product = ({ id, title, imgSrc, price, rating }) => {
   const [{ basket }, dispatch] = useStateValue();
 
   const addToBasket = () => {
-    console.log('Basket: ', basket);
+    //console.log('Basket: ', basket);
     //dispatch the item into store - global state
     dispatch({
       type: 'ADD_TO_BASKET',

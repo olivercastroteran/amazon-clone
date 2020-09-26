@@ -37,6 +37,7 @@
   background-color: #fff;
   width: 98%;
   border: 1px solid #999;
+  padding: 0 5px;
 }
 
 .login__container > p {

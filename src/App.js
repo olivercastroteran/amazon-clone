@@ -7,6 +7,7 @@ import Checkout from './components/checkout/Checkout';
 import Login from './auth/login/Login';
 import { auth } from './config/fbConfig';
 import { useStateValue } from './store/StateProvider';
+import Payment from './components/checkout/payment/Payment';
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
@@ -28,20 +29,25 @@ function App() {
       }
     });
   }, []);
+
   return (
     <BrowserRouter>
       <div className="app">
         <Switch>
-          <Route path="/login">
-            <Login />
-          </Route>
           <Route exact path="/">
             <Header />
             <Home />
           </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
           <Route path="/checkout">
             <Header />
             <Checkout />
+          </Route>
+          <Route path="/payment">
+            <Header />
+            <Payment />
           </Route>
         </Switch>
       </div>

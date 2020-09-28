@@ -17,6 +17,20 @@
   color: #111;
 }
 
+.checkoutProduct__info > button:hover {
+  transform: scale(1.01);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.checkoutProduct__info > button:focus {
+  outline: none;
+}
+
+.checkoutProduct__info > button:active {
+  transform: scale(1);
+  box-shadow: none;
+}
+
 .checkoutProduct__img {
   object-fit: contain;
   width: 180px;

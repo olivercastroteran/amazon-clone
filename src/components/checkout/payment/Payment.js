@@ -7,6 +7,7 @@ import './Payment.css';
 import CurrencyFormat from 'react-currency-format';
 import { getBasketTotal } from '../../../store/reducers/reducer';
 import axios from '../../../axios';
+import { db } from '../../../config/fbConfig';
 
 const Payment = () => {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -34,6 +35,7 @@ const Payment = () => {
   }, [basket]);
 
   console.log('secret key >>>', clientSecret);
+  console.log('user: ', user);
 
   const handleSubmit = async (event) => {
     // fancy stripe stuff
@@ -45,6 +47,16 @@ const Payment = () => {
         payment_method: { card: elements.getElement(CardElement) },
       })
       .then(({ paymentIntent }) => {
+        db.collection('users')
+          .doc(user?.uid)
+          .collection('orders')
+          .doc(paymentIntent.id)
+          .set({
+            basket: basket,
+            amount: paymentIntent.amount,
+            createdAt: paymentIntent.created,
+          });
+
         // paymentIntent = payment confirmation
         setSucceeded(true);
         setError(null);
